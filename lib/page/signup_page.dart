@@ -21,7 +21,7 @@ class SignupPage extends StatelessWidget {
               end: Alignment.bottomLeft,
             ),
           ),
-          child: const Column(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
@@ -32,6 +32,9 @@ class SignupPage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Urbanist',
                 ),
+              ),
+              SizedBox(
+                height: 30,
               ),
               SizedBox(
                 width: 390,
@@ -49,6 +52,9 @@ class SignupPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
+                height: 30,
+              ),
+              SizedBox(
                 width: 390,
                 child: TextField(
                   decoration: InputDecoration(
@@ -62,6 +68,9 @@ class SignupPage extends StatelessWidget {
                     fillColor: Color.fromARGB(129, 255, 255, 255),
                   ),
                 ),
+              ),
+              SizedBox(
+                height: 30,
               ),
               SizedBox(
                 width: 390,
@@ -79,6 +88,9 @@ class SignupPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
+                height: 30,
+              ),
+              SizedBox(
                 width: 390,
                 child: TextField(
                   decoration: InputDecoration(
@@ -94,6 +106,9 @@ class SignupPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
+                height: 30,
+              ),
+              SizedBox(
                 width: 390,
                 child: TextField(
                   decoration: InputDecoration(
@@ -106,6 +121,29 @@ class SignupPage extends StatelessWidget {
                     filled: true,
                     fillColor: Color.fromARGB(129, 255, 255, 255),
                   ),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              SizedBox(
+                width: 250,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(213, 255, 205, 41),
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(
+                          40,
+                        ),
+                      ),
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/');
+                  },
+                  child: Text('Sign Up'),
                 ),
               ),
             ],

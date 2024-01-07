@@ -25,9 +25,16 @@ class LoginPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(
-                  height: 60,
+                SizedBox(
+                  child: Image.asset(
+                    'assets/images/Logo/Untitled-7.png',
+                    width: 250,
+                    height: 250,
+                  ),
                 ),
+                // const SizedBox(
+                //   height: 60,
+                // ),
                 const Text(
                   'Hello, Welcome Back',
                   style: TextStyle(
@@ -114,15 +121,37 @@ class LoginPage extends StatelessWidget {
                     child: Text('Login'),
                   ),
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Don't have an account?",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.of(context).pushNamed('/signup');
+                        },
+                        child: Text(
+                          'Sign up',
+                          style: TextStyle(
+                            color: Colors.amber,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ))
+                  ],
+                ),
                 SizedBox(
-                  height: 30,
+                  height: 25,
                 ),
                 Text(
                   'Or Signin with',
                   style: TextStyle(color: Colors.white),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 12,
                 ),
                 SizedBox(
                   width: 280,
@@ -154,28 +183,6 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Don't have an account?",
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                    TextButton(
-                        onPressed: () {
-                          Navigator.of(context).pushNamed('/signup');
-                        },
-                        child: Text(
-                          'Sign up',
-                          style: TextStyle(
-                            color: Colors.amber,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ))
-                  ],
-                )
               ],
             ),
           ),
